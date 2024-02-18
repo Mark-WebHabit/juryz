@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juryz - Driver</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/driver.css" />
+  </head>
+  <body class="position-relative border ">
+    <div
+      class="container-fluid bg-secondary header d-flex justify-content-between align-items-center px-4 py-3 flex-wrap"
+    >
+      <h1 class="driver-name text text-light fs-4 auth-user">Driver Name</h1>
+      <button class="btn btn-danger px-2 py-1 logout">Logout</button>
+    </div>
+
+    <div
+      class=" container-fluid d-flex flex-wrap align-items-center justify-content-center p-3 "
+    >
+      <div class="flex-column journey-image position-relative mx-3">
+        <img src="../../assets/upload.png" alt="" id="upload-btn">
+        <input type="file" name="proof" id="fileInput" style="display: none;" accept="image/jpeg">
+        <img src="../../assets/empty.png" alt="Proof" class="proof-image proof" id="proofImage">
+        <button class="btn btn-success mt-2" id="mark-as-completed">Complete</button>
+      </div>
+
+
+      <div class="infos  mx-0 journey-info mb-5 ">
+        <div class="sender-info container-fluid">
+          <p class="text-dark m-0 fw-bold fs-3 mt-3">Sender Information:</p>
+          <div class="sender-des d-flex flex-wrap">
+            <span class="text-secondary fw-bold mx-3">
+              Contact Person:
+              <span class="text text-dark" id="sender-contact" data-name="contact-person"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Sender Email:
+              <span class="text text-dark" id="sender-email" data-name="sender-email"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Pickup Location:
+              <span class="text text-dark" id="sender-pick" data-name="pickup-location"></span>
+            </span>
+            <p class="text text-dark fw-bold mx-3">
+              Note:
+              <span class="sender-note fw-bold text-dark " data-name="sender-note"
+                ></span
+              >
+            </p>
+          </div>
+          <div class="container-fluid border my-2"></div>
+          <p class="text-dark m-0 fw-bold fs-3 mt-3">Reciever Information:</p>
+          <div class="reciever-desc d-flex flex-wrap">
+            <span class="text-secondary fw-bold mx-3">
+              Receiver Name:
+              <span class="text text-dark" id="receiver-name" data-name="reciever-name"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Receiver Email:
+              <span class="text text-dark" id="receiver-email" data-name="receiver-email"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Dropoff Location:
+              <span class="text text-dark" id="receiver-dropoff" data-name="receiver-dropoff"></span>
+            </span>
+          </div>
+          <div class="container-fluid border my-2"></div>
+          <p class="text-dark m-0 fw-bold fs-3 mt-3">Package Information:</p>
+          <div class="reciever-desc d-flex flex-wrap">
+            <span class="text-secondary fw-bold mx-3">
+              Package Weight:
+              <span class="text text-dark" id="package-weight" data-name="package-weight"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Packagae Quantity:
+              <span class="text text-dark" id="package-quantity" data-name="package-quantity"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Size:
+              <span class="text text-dark" id="package-size" data-name="package-size"></span>
+            </span>
+            <p class="text text-dark fw-bold mx-3">
+              Contents:
+              <span class="package-content fw-bold text-dark" data-name="package-content"
+                ></span
+              >
+            </p>
+          </div>
+          <div class="container-fluid border my-2"></div>
+          <p class="text-dark m-0 fw-bold fs-3 mt-3">Additional Details</p>
+          <div class="details d-flex flex-wrap">
+            <span class="text-secondary fw-bold mx-3">
+              Status:
+              <span class="text text-dark" id="transaction-status" data-name="transaction-status"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Date Pickup:
+              <span class="text text-dark" id="transaction-pickup-sched" data-name="transaction-pickup-sched"></span>
+            </span>
+            <span class="text-secondary fw-bold mx-3">
+              Date Delivered:
+              <span class="text text-dark" id="transaction-ship-date" data-name="transaction-ship-date"></span>
+            </span>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text text-dark w-100 fs-4 fw-bold text-uppercase">Recent Transactions:</h2>
+      <table class="table table-striped mt-2 ">
+        <thead >
+          <tr>
+            <th scope="col" class="bg-secondary">Sender</th>
+            <th scope="col" class="bg-secondary">Reciever</th>
+            <th scope="col" class="bg-secondary">Date Completed</th>
+            <th scope="col" class="bg-secondary">Pickup Address</th>
+            <th scope="col" class="bg-secondary">Dropoff Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../sript/driver.js" defer></script>
+  </body>
+</html>

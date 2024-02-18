@@ -1,0 +1,67 @@
+.employees {
+  flex: 1;
+  height: 100%;
+  overflow: scroll;
+}
+
+.employees::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 8%;
+}
+
+table * {
+  text-transform: uppercase;
+}
+
+tbody tr td img {
+  cursor: pointer;
+}
+
+tbody tr td:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.modal-add {
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+}
+.modal-add-form {
+  max-width: 600px;
+}
+
+.search-output {
+  overflow: scroll;
+}
+
+.search-output::-webkit-scrollbar {
+  display: none;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.result:hover {
+  background-color: var(--blue);
+}
+
+.result p {
+  flex: 1;
+  padding: 0.5em;
+  color: black;
+}
+.result:hover p {
+  color: white;
+}
+
+.modal-add {
+  display: none;
+}

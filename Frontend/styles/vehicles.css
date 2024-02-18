@@ -1,0 +1,55 @@
+.vehicles {
+  flex: 1;
+  height: 100%;
+  overflow: scroll;
+}
+
+.vehicles::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 8%;
+}
+
+table * {
+  text-transform: uppercase;
+}
+
+tbody tr td img {
+  cursor: pointer;
+}
+
+tbody tr td:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.modal-add,
+.modal-assign {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0%;
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+}
+
+.modal-add,
+.modal-assign {
+  display: none;
+}
+
+.modal-add-form,
+.modal-assign-form {
+  min-height: 40%;
+  max-width: 600px;
+  border-radius: 1em;
+  overflow: scroll;
+}
+
+.modal-add-form::-webkit-scrollbar {
+  display: none;
+}

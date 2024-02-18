@@ -1,0 +1,61 @@
+body {
+  min-height: 100dvh;
+  width: 100dvw;
+  background-color: var(--dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+body > .container-fluid {
+  flex: 1;
+}
+
+.image-services {
+  height: 30vh;
+  background: url("../assets/services.png") no-repeat center center / cover;
+  position: relative;
+}
+.image-services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    #008ae6,
+    transparent
+  ); /* Change color and opacity as needed */
+}
+
+.service {
+  flex: 1;
+  margin: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  transition: all 150ms;
+}
+
+.service img {
+  width: 100px;
+}
+.service h2 {
+  font-size: 2rem;
+}
+.service p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service:hover {
+  background-color: white;
+}
+
+.service:hover * {
+  color: black;
+}

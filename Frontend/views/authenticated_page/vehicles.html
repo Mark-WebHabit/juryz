@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juryz - Vehicles</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/dashhboard.css" />
+    <link rel="stylesheet" href="../../styles/vehicles.css" />
+    <link rel="stylesheet" href="../../styles/msform.css" />
+  </head>
+  <body>
+    <div class="sidebar bg-dark h-100 d-flex flex-column">
+      <img
+        src="../../assets/menus.png"
+        alt="Menu"
+        class="hamburger float-right mt-3 mx-3"
+      />
+      <div class="container-fluid h-100 content">
+        <div class="container-fluid my-3">
+          <h3 class="text text-center text-uppercase">Welcome</h3>
+          <h4 class="auth-user text text-center text-uppercase">Mark Luiz</h4>
+        </div>
+        <div class="menu d-flex flex-column">
+          <a
+            href="./dashboard.html"
+            class="text text-light fw-bold fs-4 text-decoration-none p-3"
+            >Dashboard</a
+          >
+          <a
+            href="./employees.html"
+            class="text text-light fw-bold fs-4 text-decoration-none p-3"
+            >Employees</a
+          >
+          <a
+            href="./transactions.html"
+            class="text text-light fw-bold fs-4 text-decoration-none p-3"
+            >Transactions</a
+          >
+          <a
+            href="./vehicles.html"
+            class="text text-light fw-bold fs-4 text-decoration-none p-3"
+            >Vehicles</a
+          >
+          <a
+            href="."
+            class="text text-light fw-bold fs-4 text-decoration-none p-3"
+            id="logout"
+            >Logout</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="vehicles">
+      <div
+        class="container-fluid bg-secondary d-flex align-items-center justify-content-between header"
+      >
+        <p class="text fs-4 text-uppercase fw-semi">Vehicle management</p>
+        <div class="input-fields d-flex align-items-center">
+          <!-- <select name="status" class="text text-dark p-2">
+            <option value="" class="text text-dark p-2">Filter Status</option>
+            <option value="journey" class="text text-dark p-2">
+              On Journey
+            </option>
+            <option value="standby" class="text text-dark p-2">
+              On Standby
+            </option>
+            <option value="unassigned" class="text text-dark p-2">
+              Unassigned
+            </option>
+          </select> -->
+          <button class="btn btn-warning text fw-semi mx-1 add-vehicle">
+            Add Vehicle
+          </button>
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Vehicle Unit</th>
+            <th scope="col">Plate Number</th>
+            <th scope="col">Driver</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="modal-add">
+      <div class="container bg-dark modal-add-form">
+        <form id="msform" class="msform1">
+          <!-- fieldsets -->
+          <fieldset class="mt-5">
+            <h2 class="fs-title">Vehicle Information</h2>
+            <h3 class="fs-subtitle">Fill All Fields</h3>
+            <input type="text" name="vehicle_unit" placeholder="Vehicle Unit" />
+            <input
+              type="text"
+              name="vehicle_plate"
+              placeholder="Plate Number"
+            />
+
+            <input
+              type="submit"
+              name="submit"
+              class="next action-button submit"
+              value="Submit"
+            />
+            <input
+              type="button"
+              name="cancel"
+              class="cancel action-button"
+              value="Cancel"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-assign">
+      <div class="container bg-dark modal-assign-form">
+        <form id="msform" class="msform2">
+          <!-- fieldsets -->
+          <fieldset class="mt-5">
+            <h2 class="fs-title">Edit Vehicle Information</h2>
+            <h3 class="fs-subtitle">Fill All Fields</h3>
+            <input
+              type="text"
+              id="vehicle_unit"
+              name="vehicle_unit"
+              placeholder="Vehicle Unit"
+            />
+            <input
+              type="text"
+              name="vehicle_plate"
+              id="vehicle_plate"
+              placeholder="Plate Number"
+            />
+            <input type="hidden" name="id" id="selectedVehice" />
+            <select
+              name="driver"
+              class="w-100 p-2 text text-dark border select"
+            >
+              <option value="" class="text p-2 text-dark">
+                Select Available Driver
+              </option>
+            </select>
+            <input
+              type="submit"
+              name="submit"
+              class="action-button submit-update"
+              value="Submit"
+            />
+
+            <input
+              type="button"
+              name="cancel"
+              class="cancel action-button cancel-assign"
+              value="Cancel"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../sript/multistepform.js"></script>
+    <script src="../../sript/vehicle.js" defer></script>
+    <script src="../../sript/sidebar.js" defer></script>
+    <script src="../../sript/dashboard.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+.transaction {
+  flex: 1;
+  height: 100%;
+  overflow: scroll;
+}
+
+.transaction * {
+  color: black;
+}
+
+.transaction::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 8%;
+}
+tbody tr td:hover {
+  background: aqua;
+  color: white;
+}
+
+tbody tr td:last-child {
+  cursor: pointer;
+}
+
+/* .modal-view {
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+}
+.modal-view-form {
+  max-width: 600px;
+  border-radius: 1em;
+} */
+
+.modal-view {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+}
+
+.modal-view-form {
+  max-width: 600px;
+  max-height: 70%;
+  margin: auto;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.modal-view-form::-webkit-scrollbar {
+  display: none;
+}
+
+.description {
+  color: #a5a5a5;
+}
+
+.data-value {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.text-warning {
+  color: #ffc107; /* Adjust to match your theme */
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+/*  */
+.modal-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  position: relative;
+  overflow: scroll;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-results {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+  height: 150px; /* Fixed height */
+  overflow-y: scroll; /* Enable vertical scroll */
+}
+
+.modal-actions {
+  text-align: right;
+}
+
+.modal-actions button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.vehicle-standby:hover {
+  background-color: aquamarine;
+}

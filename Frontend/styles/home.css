@@ -1,0 +1,107 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body {
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: 7% 1fr 7%;
+}
+
+.booking-table {
+  overflow: scroll;
+}
+.booking-table::-webkit-scrollbar {
+  display: none;
+}
+.action {
+  width: 35px;
+  cursor: pointer;
+}
+
+tbody tr td:hover {
+  background-color: #b3ffff;
+}
+
+.modal-form {
+  max-width: 700px;
+  height: 80%;
+  overflow: scroll;
+  border-radius: 1em;
+}
+.modal-container {
+  place-items: center;
+  backdrop-filter: blur(2px);
+  display: none;
+}
+.modal-form::-webkit-scrollbar {
+  display: none;
+}
+.back {
+  width: 35px;
+  cursor: pointer;
+}
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  /*Image only BG fallback*/
+
+  /*background = gradient + image pattern combo*/
+  background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+
+textarea {
+  border: none;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.modal-view {
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+  display: none;
+}
+.view {
+  max-width: 700px;
+  height: 80%;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  gap: 1em;
+  overflow: scroll;
+}
+.view::-webkit-scrollbar {
+  display: none;
+}
+
+.view .proof-image {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.view .proof-image div:first-child {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.view .proof-image div:first-child img {
+  width: 70%;
+}
+.view .proof-image div:last-child {
+  flex: 1;
+  height: 100%;
+}

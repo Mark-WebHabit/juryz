@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(---gray);
+}
+
+.sidebar {
+  width: 15%;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 25%;
+  }
+}
+@media (max-width: 850px) {
+  .sidebar {
+    width: 35%;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    width: 60%;
+  }
+}
+@media (max-width: 300px) {
+  .sidebar {
+    width: 80%;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.menu {
+  flex: 1;
+  padding: 1em 0;
+}
+.menu a:hover {
+  background-color: #6c757d;
+}

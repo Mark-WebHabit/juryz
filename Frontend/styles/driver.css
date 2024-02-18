@@ -1,0 +1,16 @@
+body {
+  min-height: 100vh;
+}
+
+.proof {
+  max-width: 350px;
+  max-height: 400px;
+}
+
+#upload-btn {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  width: 40px;
+  cursor: pointer;
+}

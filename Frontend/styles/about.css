@@ -1,0 +1,81 @@
+body {
+  min-height: 100dvh;
+  width: 100dvw;
+  background-color: var(--dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+body > .container-fluid {
+  flex: 1;
+}
+
+.image-services {
+  height: 30vh;
+  background: url("../assets/about.png") no-repeat center center / cover;
+  position: relative;
+  animation: animate 60s linear infinite;
+}
+
+.image-services::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    #008ae6,
+    transparent
+  ); /* Change color and opacity as needed */
+}
+
+@keyframes animate {
+  20% {
+    background: url("../assets/contact.png") no-repeat top center / cover;
+  }
+  40% {
+    background: url("../assets/contact.png") no-repeat center center / cover;
+  }
+  60% {
+    background: url("../assets/contact.png") no-repeat bottom center / cover;
+  }
+  80% {
+    background: url("../assets/contact.png") no-repeat center center / cover;
+  }
+  100% {
+    background: url("../assets/contact.png") no-repeat top center / cover;
+  }
+}
+
+.contact {
+  flex: 1;
+  margin: 1em 0.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  transition: all 150ms;
+}
+
+.contact img {
+  width: 100px;
+}
+.contact h2 {
+  margin-top: 0.5em;
+  font-size: 2rem;
+}
+.contact p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.contact:hover {
+  background-color: white;
+}
+
+.contact:hover * {
+  color: black;
+}

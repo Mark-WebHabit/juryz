@@ -1,0 +1,6 @@
+
+
+before deplying change the BASE URL in the index.js, home.js
+change the winodws.location in the home.js line 67 before deploying
+
+employee view
